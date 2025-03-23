@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function validateEmail() {
+            var email = document.getElementById('email').value;
+            var confirmEmail = document.getElementById('confirm-email').value;
+
+            if (email !== confirmEmail) {
+                alert('Email addresses do not match.');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+<!-- Header -->
+        <header>
+            <h1>Contact Us</h1>
+            <img src="images/mtn-logo.jpeg" alt="Mountains" class="header-logo">
+        </header>
+
+<!-- Nav -->
+        <nav>
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="aboutpage.html" class="nav-button">About Montana</a>
+            <div class="dropdown">
+                <button class="dropbtn">Cities</button>
+                <div class="dropdown-content">
+                    <a href="helena.html">Helena</a>
+                    <a href="missoula.html">Missoula</a>
+                    <a href="whitefish.html">Whitefish</a>
+                </div>
+            </div>
+            <a href="contact.html" class="nav-button">Contact</a>
+        </nav>
+
+<!-- Main -->
+        <main>
+            <section>
+                <form onsubmit="return validateEmail()">
+                    <div class="form-group">
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-email">Confirm Email Address:</label>
+                        <input type="email" id="confirm-email" name="confirm-email" placeholder="Confirm your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="question">Your Question:</label>
+                        <textarea id="question" name="question" placeholder="Type your question here..." required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="submit-button">Submit</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+<!-- Aside -->
+        <aside>
+            <h3>Upcoming Events</h3>
+            <p>No Events at this time.</p>
+        </aside>
+<!-- Footer -->
+        <footer>
+          <p>Copyright © Serena Walshaw, WGU student. All rights reserved. <a href="sources.html">Click here</a> for site sources.</p>
+        </footer>
+    </div>
+</body>
+</html>
